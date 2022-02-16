@@ -50,6 +50,7 @@ driver.implicitly_wait(10)
 
 
 def gangnam(a):
+    driver.delete_all_cookies()
     url = "https://www.gangnam.go.kr/notice/list.do?mid=ID05_0402"
     driver.get(url)
     box = driver.find_element_by_id('keyword')
@@ -71,6 +72,7 @@ def gangnam(a):
 
 
 def gangdong(a):
+    driver.delete_all_cookies()
     url = "https://www.gangdong.go.kr/web/newportal/notice/01"
     driver.get(url)
     box = driver.find_element_by_id('sv')
@@ -93,6 +95,7 @@ def gangdong(a):
 
 
 def gangbuk(a):
+    driver.delete_all_cookies()
     url = "https://www.gangbuk.go.kr/www/contents.do?key=8065"
     driver.get(url)
     iframe = driver.find_element_by_tag_name("iframe")
@@ -117,6 +120,7 @@ def gangbuk(a):
 
 
 def gangseo(a):
+    driver.delete_all_cookies()
     driver.maximize_window()
     url = "https://www.gangseo.seoul.kr/gs060101?menuNo=491"
     driver.get(url)
@@ -138,6 +142,7 @@ def gangseo(a):
 
 
 def gwanak(a):
+    driver.delete_all_cookies()
     url = "https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=289"
     driver.get(url)
     box = driver.find_element_by_id('searchKey')
@@ -160,6 +165,7 @@ def gwanak(a):
 
 
 def gwangjin(a):
+    driver.delete_all_cookies()
     url = "https://www.gwangjin.go.kr/portal/bbs/B0000003/list.do?menuNo=200192"
     driver.get(url)
     box = driver.find_element_by_name('searchWrd')
@@ -181,6 +187,7 @@ def gwangjin(a):
 
 
 def guro(a):
+    driver.delete_all_cookies()
     url = "https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=663&key=1791&"
     driver.get(url)
     box = driver.find_element_by_id('searchKrwd_search')
@@ -203,6 +210,7 @@ def guro(a):
 
 
 def geumcheon(a):
+    driver.delete_all_cookies()
     url = "https://www.geumcheon.go.kr/portal/tblSeolGosiDetailList.do?key=294&rep=1"
     driver.get(url)
     box = driver.find_element_by_id('searchKrwd')
@@ -224,6 +232,7 @@ def geumcheon(a):
 
 
 def nowon(a):
+    driver.delete_all_cookies()
     url = "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1003&q_clCode=0"
     driver.get(url)
     box = driver.find_element_by_name('q_searchVal')
@@ -246,6 +255,7 @@ def nowon(a):
 
 
 def dobong(a):
+    driver.delete_all_cookies()
     url = "https://www.dobong.go.kr/Contents.asp?code=10004825"
     driver.get(url)
     iframe = driver.find_element_by_id("contentFrm")
@@ -269,6 +279,7 @@ def dobong(a):
 
 
 def ddm(a):
+    driver.delete_all_cookies()
     url = "https://www.ddm.go.kr/www/contents.do?key=201&searchNotAncmtSeCode=01,02,04,05,06,07"
     driver.get(url)
     iframe = driver.find_element_by_id("mergerFrame")
@@ -293,6 +304,7 @@ def ddm(a):
 
 
 def dongjak(a):
+    driver.delete_all_cookies()
     url = "https://www.dongjak.go.kr/portal/bbs/B0000172/list.do?menuNo=200644"
     driver.get(url)
     box = driver.find_element_by_id('searchWrd')
@@ -315,6 +327,7 @@ def dongjak(a):
 
 
 def mapo(a):
+    driver.delete_all_cookies()
     url = "https://www.mapo.go.kr/site/main/board/gosi/list"
     driver.get(url)
     box = driver.find_element_by_id('sv')
@@ -336,6 +349,7 @@ def mapo(a):
 
 
 def sdm(a):
+    driver.delete_all_cookies()
     url = "http://www.sdm.go.kr/news/notice/notice.do"
     driver.get(url)
     box = driver.find_element_by_id('keyword')
@@ -358,6 +372,7 @@ def sdm(a):
 
 
 def seocho(a):
+    driver.delete_all_cookies()
     url = "https://www.seocho.go.kr/site/seocho/05/10506020000002015070811.jsp"
     driver.get(url)
     iframe = driver.find_element_by_xpath(
@@ -383,6 +398,7 @@ def seocho(a):
 
 
 def sd(a):
+    driver.delete_all_cookies()
     url = "https://www.sd.go.kr/main/selectBbsNttList.do?key=1473&bbsNo=184&integrDeptCode=&searchCtgry=&searchCnd=SJ&searchKrwd="
     driver.get(url)
     box = driver.find_element_by_id('searchKrwd_search')
@@ -405,6 +421,7 @@ def sd(a):
 
 
 def sb(a):
+    driver.delete_all_cookies()
     url = "https://www.sb.go.kr/main/cop/bbs/gosi.do"
     driver.get(url)
     box = driver.find_element_by_id('searchWord')
@@ -428,6 +445,7 @@ def sb(a):
 
 
 def songpa(a):
+    driver.delete_all_cookies()
     url = "https://www.songpa.go.kr/www/selectGosiList.do?key=2776&not_ancmt_se_code="
     driver.get(url)
     box = driver.find_element_by_id('ipt_lab')
@@ -450,6 +468,7 @@ def songpa(a):
 
 
 def yangcheon(a):
+    driver.delete_all_cookies()
     url = "https://www.yangcheon.go.kr/site/yangcheon/ex/externalLinks/announcementList.do"
     driver.get(url)
     iframe = driver.find_element_by_id("mergerFrame")
@@ -473,6 +492,7 @@ def yangcheon(a):
 
 
 def ydp(a):
+    driver.delete_all_cookies()
     url = "https://www.ydp.go.kr/www/selectEminwonList.do?not_ancmt_se_code=01%2C02%2C04%2C05%2C06%2C07&ofr_pageSize=10&key=2852&"
     driver.get(url)
     box = driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/main/article/div/div[2]/form/fieldset/div/div/input")
@@ -495,6 +515,7 @@ def ydp(a):
 
 
 def yongsan(a):
+    driver.delete_all_cookies()
     url = "https://www.yongsan.go.kr/portal/bbs/B0000095/list.do?menuNo=200233"
     driver.get(url)
     box = driver.find_element_by_id('searchWrd')
@@ -519,6 +540,7 @@ def yongsan(a):
 
 
 def ep(a):
+    driver.delete_all_cookies()
     url = "https://www.ep.go.kr/www/selectEminwonList.do?key=754&notAncmtSeCode=01"
     driver.get(url)
     box = driver.find_element_by_xpath("/html/body/div/div/div/main/article/div/div[1]/form/div/div[2]/input")
@@ -540,6 +562,7 @@ def ep(a):
 
 
 def jongno(a):
+    driver.delete_all_cookies()
     url = "https://www.jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000271&menuId=1756&menuNo=1756"
     driver.get(url)
     box = driver.find_element_by_id('searchWrd')
@@ -565,6 +588,7 @@ def jongno(a):
 
 
 def junggu(a):
+    driver.delete_all_cookies()
     url = "http://www.junggu.seoul.kr/content.do?cmsid=14232"
     driver.get(url)
     box = driver.find_element_by_name('searchValue')
@@ -586,6 +610,7 @@ def junggu(a):
 
 
 def jungnang(a):
+    driver.delete_all_cookies()
     url = "https://www.jungnang.go.kr/portal/bbs/list/B0000117.do?menuNo=200475"
     driver.get(url)
     box = driver.find_element_by_id('searchWrd')
