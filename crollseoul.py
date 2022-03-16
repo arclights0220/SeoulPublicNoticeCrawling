@@ -12,6 +12,7 @@ import time
 import html.parser
 import chromedriver_autoinstaller
 from selenium.webdriver.support.ui import Select
+import webbrowser
 import warnings
 
 
@@ -60,6 +61,7 @@ def gangnam(a):
             '#contents-wrap > div > div.notice.board.list.clear-b > div > div:nth-child(1) > div > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n강남구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -68,6 +70,7 @@ def gangnam(a):
                                                             for _ in splittext))
     except:
         print("\n강남구청 오류")
+        webbrowser.open(url)        
         print("\n", url)
 
 
@@ -87,6 +90,7 @@ def gangdong(a):
             '#content_focus > div.table01.table-warp > table > tbody > tr')
         if not search_result:
             print("\n강동구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -95,6 +99,7 @@ def gangdong(a):
                                                             for _ in splittext))
     except:
         print("\n강동구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 # iframe
 
@@ -117,6 +122,7 @@ def gangbuk(a):
             'body > form > table:nth-child(32) > tbody > tr > td > table:nth-child(1) > tbody > tr:nth-child(6)')
         if not search_result:
             print("\n강북구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -125,6 +131,7 @@ def gangbuk(a):
                                                             for _ in splittext))
     except:
         print("\n강북구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 # 웹게시판 검색
 
@@ -163,6 +170,7 @@ def gangseo(a):
                                                             for _ in splittext))
     except:
         print("\n강서구청 오류")
+        webbrowser.open(url)
         print("\n" + url)
 
 
@@ -182,6 +190,7 @@ def gwanak(a):
             '#boardDivId > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n관악구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -191,6 +200,7 @@ def gwanak(a):
                                                             for _ in splittext))
     except:
         print("\n관악구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -210,6 +220,7 @@ def gwangjin(a):
             '#content > div.table.m > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n광진구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -217,7 +228,8 @@ def gwangjin(a):
             print("\n광진구청 " + a + "에 관한 최신공고 : " + ' '.join(str(_)
                                                             for _ in splittext))
     except:
-        print("\n광진청 오류")
+        print("\n광진구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -237,6 +249,7 @@ def guro(a):
             '#board > div > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n구로구청 " + a + "에 관한 최신공고 : 없음")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -246,6 +259,7 @@ def guro(a):
                                                             for _ in splittext))
     except:
         print("\n구로구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -265,6 +279,7 @@ def geumcheon(a):
             '#contents > div > div > div > fieldset > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n금천구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -273,6 +288,7 @@ def geumcheon(a):
                                                             for _ in splittext))
     except:
         print("\n금천구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -292,6 +308,7 @@ def nowon(a):
             '#printArea > div:nth-child(2) > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n노원구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -301,6 +318,7 @@ def nowon(a):
                                                             for _ in splittext))
     except:
         print("\n노원구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -322,6 +340,7 @@ def dobong(a):
             'body > form > table:nth-child(32) > tbody > tr > td > table:nth-child(1) > tbody > tr:nth-child(6)')
         if not search_result:
             print("\n도봉구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -330,6 +349,7 @@ def dobong(a):
                                                             for _ in splittext))
     except:
         print("\n도봉구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -351,6 +371,7 @@ def ddm(a):
             'body > form > table:nth-child(32) > tbody > tr > td > table:nth-child(1) > tbody > tr:nth-child(6)')
         if not search_result:
             print("\n동대문구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -360,6 +381,7 @@ def ddm(a):
                                                              for _ in splittext))
     except:
         print("\n동대문구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -379,6 +401,7 @@ def dongjak(a):
             '#content > div.clearfix > div.contentData > div.bdList > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n동작구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -388,6 +411,7 @@ def dongjak(a):
                                                             for _ in splittext))
     except:
         print("\n동작구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -401,21 +425,25 @@ def mapo(a):
         box.send_keys(a)
         btn.click()
         driver.switch_to.window(driver.window_handles[-1])      
-        time.sleep(5)
+        time.sleep(5) 
         html = driver.page_source
         soup = BeautifulSoup(html, 'html.parser')
         search_result = soup.select_one(
             '#boardSearch > div.inner_box > ul > li:nth-child(1) > div.top')
         if not search_result:
             print("\n마포구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
             del splittext[-2:]
             print("\n마포구청 " + a + "에 관한 최신공고 : " + ' '.join(str(_)
                                                             for _ in splittext))
+            print("현재 마포구청은 코드 수정 중에 있습니다. 열리는 사이트에서 재검색해주십시오")
+            webbrowser.open(url)
     except:
         print("\n마포구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -436,6 +464,7 @@ def sdm(a):
             '#frm > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n서대문구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -445,6 +474,7 @@ def sdm(a):
                                                              for _ in splittext))
     except:
         print("\n서대문구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -467,6 +497,7 @@ def seocho(a):
             'body > form > div > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n서초구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -476,6 +507,7 @@ def seocho(a):
                                                             for _ in splittext))
     except:
         print("\n서초구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -495,6 +527,7 @@ def sd(a):
             '#board > div > div > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n성동구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -504,6 +537,7 @@ def sd(a):
                                                             for _ in splittext))
     except:
         print("\n성동구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -524,6 +558,7 @@ def sb(a):
             '#mainCont > form > div.bbsList > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n성북구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -533,6 +568,7 @@ def sb(a):
                                                             for _ in splittext))
     except:
         print("\n성북구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -552,6 +588,7 @@ def songpa(a):
             '#contents > div > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n송파구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -561,6 +598,7 @@ def songpa(a):
                                                             for _ in splittext))
     except:
         print("\n송파구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -582,6 +620,7 @@ def yangcheon(a):
             'body > div.board_list > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n양천구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -590,6 +629,7 @@ def yangcheon(a):
                                                             for _ in splittext))
     except:
         print("\n양천구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -611,6 +651,7 @@ def ydp(a):
             '#contents > div.p-wrap.bbs.bbs__list > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n영등포구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -619,6 +660,7 @@ def ydp(a):
                                                              for _ in splittext))
     except:
         print("\n영등포구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 #전체 -> 제목
 
@@ -641,6 +683,7 @@ def yongsan(a):
             '#content > div.bd-list > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n용산구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -650,6 +693,7 @@ def yongsan(a):
                                                             for _ in splittext))
     except:
         print("\n용산구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -671,6 +715,7 @@ def ep(a):
             '#contents > div.epform.bbs.gosi.list > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n은평구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -679,6 +724,7 @@ def ep(a):
                                                             for _ in splittext))
     except:
         print("\n은평구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -701,6 +747,7 @@ def jongno(a):
             '#subContent > form > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n종로구청 " + a + "에 관한 최신공고 : ")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -710,6 +757,7 @@ def jongno(a):
                                                             for _ in splittext))
     except:
         print("\n종로구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -729,6 +777,7 @@ def junggu(a):
             '#content > div.page > div.board_list > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n중구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -737,6 +786,7 @@ def junggu(a):
                                                            for _ in splittext))
     except:
         print("\n중구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -756,6 +806,7 @@ def jungnang(a):
             '#content > div > div.table_wrap > div > table > tbody > tr:nth-child(1)')
         if not search_result:
             print("\n중랑구청 에러")
+            webbrowser.open(url)
         else:
             onlytext = search_result.getText()
             splittext = onlytext.split()
@@ -765,6 +816,7 @@ def jungnang(a):
                                                             for _ in splittext))
     except:
         print("\n중랑구청 오류")
+        webbrowser.open(url)
         print("\n", url)
 
 
