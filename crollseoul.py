@@ -70,7 +70,7 @@ def gangnam(a):
                                                             for _ in splittext))
     except:
         print("\n강남구청 오류")
-        webbrowser.open(url)        
+        webbrowser.open(url)
         print("\n", url)
 
 
@@ -142,7 +142,8 @@ def gangseo(a):
         driver.maximize_window()
         url = "https://www.gangseo.seoul.kr/gs040301"
         driver.get(url)
-        iframe = driver.find_element_by_xpath("/html/body/div[2]/main/div[2]/div[1]/iframe")
+        iframe = driver.find_element_by_xpath(
+            "/html/body/div[2]/main/div[2]/div[1]/iframe")
         driver.switch_to.frame(iframe)
         box = driver.find_element_by_xpath("/html/body/form/fieldset/input[1]")
         btn = driver.find_element_by_xpath('/html/body/form/fieldset/input[2]')
@@ -419,13 +420,15 @@ def mapo(a):
     try:
         driver.implicitly_wait(30)
         url = "https://www.mapo.go.kr/site/main/home"
-        driver.get(url)           
-        box = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/div/div[3]/div[2]/input')
-        btn = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/div/div[3]/div[2]/a[2]')
+        driver.get(url)
+        box = driver.find_element_by_xpath(
+            '/html/body/div[2]/div[2]/div[2]/div/div[3]/div[2]/input')
+        btn = driver.find_element_by_xpath(
+            '/html/body/div[2]/div[2]/div[2]/div/div[3]/div[2]/a[2]')
         box.send_keys(a)
         btn.click()
-        driver.switch_to.window(driver.window_handles[-1])      
-        time.sleep(5) 
+        driver.switch_to.window(driver.window_handles[-1])
+        time.sleep(5)
         html = driver.page_source
         soup = BeautifulSoup(html, 'html.parser')
         search_result = soup.select_one(
@@ -734,7 +737,8 @@ def jongno(a):
 
         url = "https://www.jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000271&menuId=1756&menuNo=1756"
         driver.get(url)
-        box = driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/div[2]/div/div[2]/form/fieldset/div/div/input[1]')
+        box = driver.find_element_by_xpath(
+            '/html/body/div[4]/div[2]/div/div[2]/div/div[2]/form/fieldset/div/div/input[1]')
         btn = driver.find_element_by_xpath(
             '/html/body/div[4]/div[2]/div/div[2]/div/div[2]/form/fieldset/div/div/input[2]')
         select = Select(driver.find_element_by_name('searchCnd'))
@@ -820,33 +824,69 @@ def jungnang(a):
         print("\n", url)
 
 
+def jb24(a):
+    try:
+        driver.implicitly_wait(15)
+
+        url = "https://www.gov.kr/portal/locgovNews"
+        driver.get(url)
+        box = driver.find_element_by_xpath(
+            '/html/body/div[1]/div[3]/div/div/form/div[1]/div[2]/p/input')
+        btn = driver.find_element_by_xpath(
+            "/html/body/div[1]/div[3]/div/div/form/div[1]/div[2]/p/span/button")
+        box.send_keys(a)
+        btn.click()
+        html = driver.page_source
+        soup = BeautifulSoup(html, 'html.parser')
+        search_result = soup.select_one(
+            'body > div.wrap > div.contentsWrap > div > div > div.unifiedSch-lst.unifiedSch3 > ul > li:nth-child(1) > dl > dt > a')
+        datea = soup.select_one(
+            "body > div.wrap > div.contentsWrap > div > div > div.unifiedSch-lst.unifiedSch3 > ul > li:nth-child(1) > div > span:nth-child(2)")
+        if not search_result:
+            print("\n정부24 에러")
+            webbrowser.open(url)
+        else:
+            onlytext = search_result.getText()
+            onlytext2 = datea.getText()
+            splittext = onlytext.split()
+            splittext2 = onlytext2.split()
+            print("\n정부24 " + a + "에 관한 최신공고 : " + ' '.join(str(_)
+                                                            for _ in splittext) + ' '.join(str(_)
+                                                                                           for _ in splittext2))
+    except:
+        print("\n정부24 오류")
+        webbrowser.open(url)
+        print("\n", url)
+
+
 what = input("\n검색할 문장 혹은 단어를 입력하세요 : ")
 
 allprocess = [
-                gangnam(what),
-              gangdong(what),
-              gangbuk(what),
-              gangseo(what),
-              gwangjin(what),
-              guro(what),
-              geumcheon(what),
-              nowon(what),
-              dobong(what),
-              ddm(what),
-              dongjak(what),
-              mapo(what),
-              sdm(what),
-              seocho(what),
-              sd(what),
-              sb(what),
-              songpa(what),
-              yangcheon(what),
-              ydp(what),
-              yongsan(what),
-              ep(what),
-              jongno(what),
-              jungnang(what),
-              gwanak(what)]
+      gangnam(what),
+      gangdong(what),
+      gangbuk(what),
+      gangseo(what),
+      gwangjin(what),
+      guro(what),
+      geumcheon(what),
+      nowon(what),
+      dobong(what),
+      ddm(what),
+      dongjak(what),
+      mapo(what),
+      sdm(what),
+      seocho(what),
+      sd(what),
+      sb(what),
+      songpa(what),
+      yangcheon(what),
+      ydp(what),
+      yongsan(what),
+      ep(what),
+      jongno(what),
+      jungnang(what),
+      gwanak(what),
+    jb24(what)]
 
 
 for i in allprocess:
