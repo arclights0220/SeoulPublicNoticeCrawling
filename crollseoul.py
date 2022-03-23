@@ -442,7 +442,7 @@ def mapo(a):
             del splittext[-2:]
             print("\n마포구청 " + a + "에 관한 최신공고 : " + ' '.join(str(_)
                                                             for _ in splittext))
-            print("현재 마포구청은 코드 수정 중에 있습니다. 열리는 사이트에서 재검색해주십시오")
+            print("\n현재 마포구청은 코드 수정 중에 있습니다. 열리는 사이트에서 재검색해주십시오")
             webbrowser.open(url)
     except:
         print("\n마포구청 오류")
